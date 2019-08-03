@@ -245,7 +245,7 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>#phpmyadmin文件包含漏洞</p>
+                <p>##phpmyadmin文件包含漏洞</p>
 <p>Phpmyadmin的文件包含漏洞是4.8版本的漏洞，下面是漏洞的复现</p>
 <p>用root权限进入phpmyadmin</p>
 <p><img src="1.png" alt><br>点击顶部的SQL按钮，执行SQL查询。<br><img src="2.png" alt><br>获取自己的session ID，即为cookies中的phpmyadmin的value值，<br><img src="3.png" alt><br>对应的session文件为var/lib/php/session/sess_就是session ID。<br>在index.php后加上<br>?target=db_sql.php%253f/../../../../../../../../../../../../../../var/lib/php/sessions/sess_<br>即可成功利用该漏洞。</p>
