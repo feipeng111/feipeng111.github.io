@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          php基础 - null
+          Linux常用命令 - null
         
     </title>
 
-    <link rel="canonical" href="http://yuanpf.com/2019/08/04/php基础/">
+    <link rel="canonical" href="http://yuanpf.com/2019/08/05/Linux常用命令/">
 
     <!-- Bootstrap Core CSS -->
 
@@ -105,11 +105,11 @@
                         <div class="tags">
                             
                         </div>
-                        <h1>php基础</h1>
+                        <h1>Linux常用命令</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by John Doe on
-                            2019-08-04
+                            2019-08-05
                         </span>
                     </div>
                 
@@ -245,11 +245,54 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>php基础</p>
-<p>php是嵌入html页面中的脚本语言，是目前最流行的网站开发语言之一<br>php规范一般为<?php 内容?>（&lt;?php后加空格），php脚本可以单独存在也可与html页面结合。<br>php中的变量:</p>
-<p>以$符号开始后面跟着变量名称，变量名必须以字母或者下划线开始，变量名只能包含字母数字字符以及下划线（A-a,0-9和_）<br>分为以下几类：<br>bool   True  False<br>int   正整数 0 负整数<br>float 小数<br>string   ‘qwq’ “f322”  &lt;&lt;&lt;EOF dfff EOF<br>资源类型  STDIN STDOUT STDERROR  打开的文件    打开的网络连接<br>数组 [1,2,3,4,5,6] [‘name’=&gt; ‘zs’,’age’=&gt; 18]<br>空 NULL<br>对象  new person()</p>
-<p>常量:</p>
-<p>一旦赋值不会改变，尽量使用大写，常量分为系统常量和自定义常量。系统常量理解为值不会有改变的量。php中的define()来定义自定义常量，使用时不需要$符。</p>
+                <p>关机、重启、退出：<br>reboot :重启<br>init 6 :重启<br>shutdown -r :重启<br>init 0 :关机<br>shutdown -h now :关机<br>halt :关机<br>poweroff :关机<br>logout :退出<br>exit :退出</p>
+<p>几种系统模式 init :<br>level 0 :关机<br>level 3 :命令行模式<br>level 6 :重启</p>
+<p>./或/ 代表根目录</p>
+<p>sudo  : 以管理员权限执行<br>sudo passwd root  :改密码<br>su    :切换账户<br>clear   : 清屏 或Ctrl+L<br>ifconfig  :  可设置网络设备的状态，或是显示目前的设置<br>init 3 :切换到命令行模式<br>startx ：启用桌面</p>
+<p>查看文件：<br>cat</p>
+<p>ls :列出目录<br>    *<br>-a  :全部的文件，连同隐藏档( 开头为 . 的文件) 一起列出来(常用)<br>    *<br>-d  :仅列出目录本身，而不是列出目录内的文件数据(常用)<br>    *<br>-l   :长数据串列出，包含文件的属性与权限等等数据；(常用)</p>
+<p>pwd  :显示目前所在目录<br>    *<br>-P :显示出确实的路径，而非使用连结 (link) 路径。</p>
+<p>more  :让画面在显示满一页时暂停，此时可按空格健继续显示下一个画面，或按 q 键停止显示。<br>less  :less 命令的用法与 more 命令类似，也可以用来浏览超过一页的文件。所不同的是 less 命令除了可以按空格键向下显示文件外，还可以利用上下键来卷动文件。当要结束浏览时，只要在 less 命令的提示符“：”下按 q 键即可。<br>tail  :显示后几行<br>head : 显示前几行</p>
+<p>文件、文件夹：</p>
+<p>mkdir  [-mp] :  新建文件夹<br>    *<br>-m  :配置文件的权限     mkdir  -m  755 test<br>    *<br>-p   :帮助你直接将所需要的目录(包含上一级目录)递归创建起来    mkdir  test1/test2…</p>
+<p>rm  [-fir]:删除文件<br>    *<br>-f :就是 force 的意思，忽略不存在的文件，不会出现警告信息<br>    *<br>-r  :递归删除！最常用在目录的删除！这是非常危险的选项<br>    *<br>-i  :互动模式，在删除前会询问使用者是否动作</p>
+<p>cp :复制文件或文件夹到指定位置<br>    *<br>cp -r ../Documents .   : -r指复制目录，. 指当前目录， 可以使用相对路径或绝对路径来复制</p>
+<p>mv  :移动文件或文件夹到指定位置<br>touch  :新建文件</p>
+<p>rmdir  :删除文件夹<br>    *<br>-p  :连同下一级『空的』目录也一起删除   如：rmdir -p  w  s  ss    (w、s、ss为空目录)</p>
+<p>cp :复制文件或文件夹到指定位置<br>    *<br>cp -r ../Documents .   : -r指复制目录，. 指当前目录， 可以使用相对路径或绝对路径来复制</p>
+<p>chomd  : 更改文件权限</p>
+<p>查找文件:<br>find  :全盘查找文件<br>grep  :全盘所有文件中查找某些字符，或者在某个文件中查找，通过ls 目录 |grep ‘查找内容’ 也能找到包含查找内容的文件名<br>    *<br>find和grep处理对象不同，find是在文件夹中找文件用的，可以针对文件属性（大小、日期等）进行约束；<br>    *<br>grep本质是查找文件中的字符串的，可以用正则表达式，功能强大。</p>
+<p>whereis  :查找某个命令的所在位置<br>which :查找当前用户的命令<br>    *<br>cd 这个常用的命令竟然找不到啊！为什么呢？这是因为 cd 是bash 内建的命令！ 但是 which 默认是找 PATH 内所规范的目录，所以当然一定找不到的！</p>
+<p>进程:<br>jobs :显示当前暂停的进程（与ctrl+z(暂停)配合）<br>bg  %N  :使第N个任务在后台运行<br>fg   %N  :使第N个任务在前台运行<br>默认bg，fg不带%N时表示对最后一个进程操作！<br>    *<br>jobs命令只看当前终端生效的，关闭终端后，在另一个终端jobs已经无法看到后台跑得程序了，此时利用ps（进程查看命令）</p>
+<p>ps -aux  :查看进程<br>    *<br>-a  :显示所有程序<br>    *<br>-u  :以用户为主的的格式来显示<br>    *<br>-x  :显示所有程序，不以终端机来区分</p>
+<p>kill  进程号  ：关闭进程<br>&amp;  :在命令最后加上&amp;符号，表示让这个进程到后台去执行，这样立刻返回到提示符状态，我们可以接着做下面的事。如：command &amp;<br>    *<br>&amp; 表示让这个进程到后台去执行,如果关了shell窗口甚至退出ssh登录或vnc登录，那么进程自动就结束了</p>
+<p>nohup  :退出窗口乃至退出登录仍然保持程序运行<br>    *<br>例nohup command &amp;</p>
+<p>压缩文件:<br>压缩包格式有：.tar     .gz     .tar.gz     .tgz     .bz2     .tar.bz2     .bz     .tar.bz     .Z     .tar.Z     .xz     .zip     .rar     .7z<br>常用格式 .tar.gz 和.zip他们的解压和压缩命令如下：<br>.tar :<br>压缩 : tar cvf  xxx.tar.gz   wsxxx<br>解包 : tar  xvf  xxx.tar.gz     解包后原始文件依然存在</p>
+<p>.zip :<br>压缩 : zip  hhh.zip   xxx(要压缩的文件名)<br>解包 :unzip  xxx.zip<br>列出内容 : unzip -l xxx.zip</p>
+<p>快捷路径：<br>.    当前目录<br>..   上级目录<br>~    home文件夹</p>
+<ul>
+<li>返回前一个目录<br>~  account   </li>
+</ul>
+<p>linux中的快捷键：<br>ctrl + c  :强制停止<br>exit、ctrl + d :退出shell<br>ctrl +l  : 清屏<br>ctrl  + x : 后台运行<br>date ：时间</p>
+<p>vi/vim工作模式：<br>切换到插入模式：<br>    *<br> i，I   ：i为[从目前光标所在处插入]，I为[在目前所在行的第一个非空格符处开始插入]<br>    *<br>a，A  : a为[从目前光标所在的下一个字符处开始插入]，A为[从光标所在行的最后一个字符处开始插入]<br>    *<br>o，O  : 英文o为[在目前光标所在得下一行处插入新的一行]，O为[在目前光标所在处的上一行插入新的一行]</p>
+<p>末行模式：<br>set nu  : 设置行号<br>w  ：保存内容<br>wq  ：保存内容并且退出编辑器<br>q!  ：不保存内容直接退出编辑器</p>
+<p>命令行模式-搜索：<br>/word  : 向光标之下寻找一个名称为word的字符串<br>n  :代表重复前一个搜寻的动作<br>:%s/word1/word2  : 寻找word1这个字符串，并将该字符串取代为word2</p>
+<p>命令行模式-删除，复制粘贴：<br>x，X  ：在一行字当中，x为向后删除一个字符，X为向前删除一个字符<br>dd ：删除光标所在的那一行<br>ndd ：n为数字，删除光标所在的向下n行<br>yy ：复制光标所在的一行<br>p   ：将复制的一行粘贴在光标的下一行<br>P   ：将复制的一行粘贴在光标的上一行<br>u   ：复原前一个动作</p>
+<p>特殊字符命令：<br>;      连续执行命令 如：mkdir 1;cd 1;vim 1</p>
+<h1 id="开头为-是root用户"><a href="#开头为-是root用户" class="headerlink" title="开头为#是root用户"></a>开头为#是root用户</h1><p>$     开头为$是普通用户<br>|      连接命令<br>：    在bash中只代表返回0</p>
+<p>？    在文件名扩展(Filename expansion)上扮演的角色是匹配一个任意的字元，但不包含 null 字元  </p>
+<ul>
+<li>在文件名上面可以代表各种字符串<br>()     指令群组<br>||     逻辑符号代表或<br>&amp;&amp;   逻辑符号代表and，和<br>&amp;     后台工作<blockquote>
+<pre><code>输出重定向      ifconfig  &gt;   xx文件 </code></pre><blockquote>
+<p>   追加输出重定向</p>
+</blockquote>
+</blockquote>
+</li>
+<li><ul>
+<li>次方运算</li>
+</ul>
+</li>
+</ul>
 
                 
 
@@ -258,12 +301,12 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2019/08/05/Linux常用命令/" data-toggle="tooltip" data-placement="top" title="Linux常用命令">&larr; Previous post</a>
+                            <a href="/2019/08/05/Linux文件权限/" data-toggle="tooltip" data-placement="top" title="Linux文件权限">&larr; Previous post</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/2019/08/03/phpmyadmin/" data-toggle="tooltip" data-placement="top" title="phpmyadmin文件包含漏洞">Next post &rarr;</a>
+                            <a href="/2019/08/04/php基础/" data-toggle="tooltip" data-placement="top" title="php基础">Next post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -476,7 +519,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async("http://yuanpf.com/2019/08/04/php基础/index.html/js/jquery.tagcloud.js",function(){
+        async("http://yuanpf.com/2019/08/05/Linux常用命令/index.html/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},

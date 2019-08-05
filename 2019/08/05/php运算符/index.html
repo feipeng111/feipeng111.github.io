@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          
+          php运算符、字符串操作、类型转换 - null
         
     </title>
 
-    <link rel="canonical" href="http://yuanpf.com/">
+    <link rel="canonical" href="http://yuanpf.com/2019/08/05/php运算符/">
 
     <!-- Bootstrap Core CSS -->
 
@@ -101,13 +101,17 @@
 			
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="z-index:2;">
                 
-				
-                    <div class="site-heading"  style="padding:40px">
-                        <h1>yuanpf</h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading"></span>
+                    <div class="post-heading" style="padding:40px">
+                        <div class="tags">
+                            
+                        </div>
+                        <h1>php运算符、字符串操作、类型转换</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by John Doe on
+                            2019-08-05
+                        </span>
                     </div>
-                
                 
                 </div>
             </div>
@@ -228,345 +232,162 @@
 
 
     <!-- Main Content -->
-    <!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
+    <!-- Modify by Yu-Hsuan Yen -->
 
-<!-- USE SIDEBAR -->
-    <!-- Post Container -->
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-                <!-- Main Content -->
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
+                <p>运算符：  处理不同的数据类型</p>
+<p>算术运算符：+ 加号，-减号/负号，* 乘号，除号：%取余数，值为整数；/计算结果，</p>
+<p>比较运算：本来就是用来对数字进行比较的，遇到字符串和数字进行比较时，把字符串转成数字进行比较<br>== 和 === 比较特殊，可以用来对字符串进行比较，不转成数字，还能不叫bool值，空，数组</p>
+<p>逻辑运算符：只进行bool值运算，非bool值，转成bool值进行运算。</p>
+<p>连接运算符：通过“.”来把字符串连接到一起，通过“=”将右边参数附加到左边参数</p>
+<p>错误控制运算符：使用“@”来把表达式可能产生的任何错误信息都被忽略掉，@echo sade;</p>
+<p>字符串操作<br>addslashes();  // ‘ “ 空 \   前 添加\    转义特殊字符，防御sql注入</p>
+<p>bin2hex(); // ascii码  计算ascii码</p>
+<p>crypt();  // 加密函数</p>
+<p>md5();  // md5 hash计算</p>
+<p>explode(); // 根据提供的字符，来切割字符串，结果是一个数组</p>
+<p>htmlspecialchars(); // ‘ “ &lt;  &gt; &amp;  转义特殊字符为html实体编码，防御xss</p>
+<p>implode();  // 讲一个数组合并为字符串，可以提供连接字符</p>
+<p>str_ireplace();  // 不区分大小写，替换字符串</p>
+<p>strchr();  //  查找字符串，并且返回字符串之后的所有内容</p>
+<p>strlen();   // 计算字符串长度</p>
+<p>substr();  // 字符串截取，按照<code>位</code>截取</p>
+<p>mb_substr();   // 字符串截取，按照<code>字</code>截取</p>
+<p>trim();  //去除两侧空白字符</p>
+<p>类型转换</p>
+<p>1、强制转换</p>
+<p>(int)$var (string)$var  (float)$var  (bool)$var</p>
+<p>2、使用具体类型函数转换</p>
+<p>inrval()  floatval()  strval()</p>
+<p>3、使用通用类型转换函数settype(nixed var , string type)<br>isset()判断变量是否定义</p>
 
-
-
-<div class="w3-row-padding">
-	<a href="/2019/08/05/php运算符/">
-        <h2 class="post-title">
-            php运算符、字符串操作、类型转换
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-	</a>
-<div class="w3-quarter">	
-
-<a href="/2019/08/05/php运算符/"><img class="w3-image" src="img/small/default.jpg"></a>
-
-</div>
-<div class="w3-threequarter">
-
-    <a href="/2019/08/05/php运算符/">
-
-        <div class="post-content-preview">
-            运算符：  处理不同的数据类型
-算术运算符：+ 加号，-减号/负号，* 乘号，除号：%取余数，值为整数；/计算结果，
-比较运算：本来就是用来对数字进行比较的，遇到字符串和数字进行比较时，把字符串转成数字进行比较== 和 === 比较特殊，可以用来对字符串进行比较，不转成数字，还能不叫bool值，空，数组
-逻辑运算符：只进行bool值运算，非bool值，转成bool值进行运算。
-连接运算.........
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by John Doe on
-            2019-08-05
-        </p>
-    
-
-</div>
-</div>
-<hr>
-
-
-<div class="w3-row-padding">
-	<a href="/2019/08/05/Linux文件权限/">
-        <h2 class="post-title">
-            Linux文件权限
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-	</a>
-<div class="w3-quarter">	
-
-<a href="/2019/08/05/Linux文件权限/"><img class="w3-image" src="img/small/default.jpg"></a>
-
-</div>
-<div class="w3-threequarter">
-
-    <a href="/2019/08/05/Linux文件权限/">
-
-        <div class="post-content-preview">
-            文件夹的X权限是能够cd进去，r是4，w是2，x是1
-chown root:root /tmp/tmp1
-whoami 查看当前用户tar 压缩和解压文件netstat 查看网络状态nslookup 查看dns信息ps 查看运行的程序top 实时查看运行的程序service 使用service控制服务启动关闭curl 来获取网页，可以使用输出重定向来下载文件wget 下载文件linux.........
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by John Doe on
-            2019-08-05
-        </p>
-    
-
-</div>
-</div>
-<hr>
-
-
-<div class="w3-row-padding">
-	<a href="/2019/08/05/Linux常用命令/">
-        <h2 class="post-title">
-            Linux常用命令
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-	</a>
-<div class="w3-quarter">	
-
-<a href="/2019/08/05/Linux常用命令/"><img class="w3-image" src="img/small/default.jpg"></a>
-
-</div>
-<div class="w3-threequarter">
-
-    <a href="/2019/08/05/Linux常用命令/">
-
-        <div class="post-content-preview">
-            关机、重启、退出：reboot :重启init 6 :重启shutdown -r :重启init 0 :关机shutdown -h now :关机halt :关机poweroff :关机logout :退出exit :退出
-几种系统模式 init :level 0 :关机level 3 :命令行模式level 6 :重启
-./或/ 代表根目录
-sudo  : 以管理员权限执行sudo .........
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by John Doe on
-            2019-08-05
-        </p>
-    
-
-</div>
-</div>
-<hr>
-
-
-<div class="w3-row-padding">
-	<a href="/2019/08/04/php基础/">
-        <h2 class="post-title">
-            php基础
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-	</a>
-<div class="w3-quarter">	
-
-<a href="/2019/08/04/php基础/"><img class="w3-image" src="img/small/default.jpg"></a>
-
-</div>
-<div class="w3-threequarter">
-
-    <a href="/2019/08/04/php基础/">
-
-        <div class="post-content-preview">
-            php基础
-php是嵌入html页面中的脚本语言，是目前最流行的网站开发语言之一php规范一般为（&lt;?php后加空格），php脚本可以单独存在也可与html页面结合。php中的变量:
-以$符号开始后面跟着变量名称，变量名必须以字母或者下划线开始，变量名只能包含字母数字字符以及下划线（A-a,0-9和_）分为以下几类：bool   True  Falseint   正整数 0 负整.........
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by John Doe on
-            2019-08-04
-        </p>
-    
-
-</div>
-</div>
-<hr>
-
-
-<div class="w3-row-padding">
-	<a href="/2019/08/03/phpmyadmin/">
-        <h2 class="post-title">
-            phpmyadmin文件包含漏洞
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-	</a>
-<div class="w3-quarter">	
-
-<a href="/2019/08/03/phpmyadmin/"><img src="1.png" style='width:100%'></a>
-
-</div>
-<div class="w3-threequarter">
-
-    <a href="/2019/08/03/phpmyadmin/">
-
-        <div class="post-content-preview">
-            Phpmyadmin的文件包含漏洞是4.8版本的漏洞，下面是漏洞的复现
-用root权限进入phpmyadmin
-点击顶部的SQL按钮，执行SQL查询。获取自己的session ID，即为cookies中的phpmyadmin的value值，对应的session文件为var/lib/php/session/sess_就是session ID。在index.php后加上?target=db.........
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by John Doe on
-            2019-08-03
-        </p>
-    
-
-</div>
-</div>
-<hr>
-
-
-
-<!-- Pager -->
-
-<ul class="pager">
-    
-    
-</ul>
-
-
-
-
-
-                <!-- 如果开启评论功能 -->
                 
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2019/08/05/Linux文件权限/" data-toggle="tooltip" data-placement="top" title="Linux文件权限">Next post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                    <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                    <!--  css & js -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+
+                
+				
             </div>
 
-          <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Featured Tags -->
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
 
-<section>
-    <!-- no hr -->
-    <h5><a href="/tags/">Tags</a></h5>
-    <div class="tags">
-        
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">Tags</a></h5>
+                    <div class="tags">
+                       
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://www.sumoon.com" target="_blank">ACE theme</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
     </div>
-</section>
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-    <h5><a href="/about/">About me</a></h5>
-    <div class="short-about">
-
-        
-            <img id = "avatar_pic" src="/img/avatar/logo.png" />
-        
-
-        
-            <p>INNOVATION IS KING!</p>
-        
-
-        <!-- SNS Link -->
-        <ul class="list-inline">
-            
-            
-            
-
-            
-
-            
-
-            
-                <li>
-                    <a target="_blank"  href="https://github.com/kinggozhang">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-            
-        </ul>
-    </div>
-</section>
-
-        <hr>
-    
-        
-  <h5>Recent posts</h3>
-  <div class="widget">
-    <ul>
-      
-        <li>
-          <a href="/2019/08/05/php运算符/">php运算符、字符串操作、类型转换</a>
-        </li>
-      
-        <li>
-          <a href="/2019/08/05/Linux文件权限/">Linux文件权限</a>
-        </li>
-      
-        <li>
-          <a href="/2019/08/05/Linux常用命令/">Linux常用命令</a>
-        </li>
-      
-        <li>
-          <a href="/2019/08/04/php基础/">php基础</a>
-        </li>
-      
-        <li>
-          <a href="/2019/08/03/phpmyadmin/">phpmyadmin文件包含漏洞</a>
-        </li>
-      
-    </ul>
-  </div>
-
-        <hr>
-    
-        
-    <h5>Achives</h5>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">5</span></li></ul>
-    </div>
-
-        <hr>
-    
-        <!-- Friends Blog -->
-
-<h5>Friends</h5>
-<ul class="list-inline">
-
-    
-        <li><a href="http://www.sumoon.com" target="_blank">ACE theme</a></li>
-    
-</ul>
+</article>
 
 
-        <hr>
-    
-</div>
 
 
-        
-    </div>
-</div>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
 
 
     <!-- Footer -->
@@ -671,7 +492,7 @@ php是嵌入html页面中的脚本语言，是目前最流行的网站开发语�
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async("http://yuanpf.com/index.html/js/jquery.tagcloud.js",function(){
+        async("http://yuanpf.com/2019/08/05/php运算符/index.html/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
