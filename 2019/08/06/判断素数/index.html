@@ -246,32 +246,7 @@
                 post-container">
 
                 <p>素数也称质数，一个大于1的自然数，除了1和它本身外，不能被其他自然数整除。<br>php代码如下：</p>
-<?php
-echo 'input:';
-$m = fgets(STDIN);
-$m = trim($m);
-settype($m, "int");
-    if($m == 2){
-        echo  iconv('utf-8','gbk',$m."是素数");
-    }elseif(($m % 2) == 0){
-         echo iconv('utf-8','gbk',$m."不是素数");
-    }else {
-        for ($i = 2; $i <= ($m - 1) / 2; $i++) {
-            if ($m % $i == 0) {
-                $a++;
-            }
-        }
-            if($a == 0) {
-                echo iconv('utf-8', 'gbk', $m . "是素数");
-            }
-             else {
-                echo iconv('utf-8', 'gbk', $m . "不是素数");
-            }
-
-        }
-
-?>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo &apos;input:&apos;;</span><br><span class="line">$m = fgets(STDIN);</span><br><span class="line">$m = trim($m);</span><br><span class="line">settype($m, &quot;int&quot;);</span><br><span class="line">    if($m == 2)&#123;</span><br><span class="line">        echo  iconv(&apos;utf-8&apos;,&apos;gbk&apos;,$m.&quot;是素数&quot;);</span><br><span class="line">    &#125;elseif(($m % 2) == 0)&#123;</span><br><span class="line">         echo iconv(&apos;utf-8&apos;,&apos;gbk&apos;,$m.&quot;不是素数&quot;);</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">        for ($i = 2; $i &lt;= ($m - 1) / 2; $i++) &#123;</span><br><span class="line">            if ($m % $i == 0) &#123;</span><br><span class="line">                $a++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">            if($a == 0) &#123;</span><br><span class="line">                echo iconv(&apos;utf-8&apos;, &apos;gbk&apos;, $m . &quot;是素数&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">             else &#123;</span><br><span class="line">                echo iconv(&apos;utf-8&apos;, &apos;gbk&apos;, $m . &quot;不是素数&quot;);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
                 
 
                 <hr>
