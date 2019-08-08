@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          判断素数 - null
+          用for循环遍历关联数组 - null
         
     </title>
 
-    <link rel="canonical" href="http://yuanpf.com/2019/08/06/判断素数/">
+    <link rel="canonical" href="http://yuanpf.com/2019/08/08/用for循环遍历关联数组/">
 
     <!-- Bootstrap Core CSS -->
 
@@ -105,11 +105,11 @@
                         <div class="tags">
                             
                         </div>
-                        <h1>判断素数</h1>
+                        <h1>用for循环遍历关联数组</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by John Doe on
-                            2019-08-06
+                            2019-08-08
                         </span>
                     </div>
                 
@@ -245,21 +245,19 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>素数也称质数，一个大于1的自然数，除了1和它本身外，不能被其他自然数整除。<br>php代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo &apos;input:&apos;;</span><br><span class="line">$m = fgets(STDIN);</span><br><span class="line">$m = trim($m);</span><br><span class="line">settype($m, &quot;int&quot;);</span><br><span class="line">    if($m == 2)&#123;</span><br><span class="line">        echo  iconv(&apos;utf-8&apos;,&apos;gbk&apos;,$m.&quot;是素数&quot;);</span><br><span class="line">    &#125;elseif(($m % 2) == 0)&#123;</span><br><span class="line">         echo iconv(&apos;utf-8&apos;,&apos;gbk&apos;,$m.&quot;不是素数&quot;);</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">        for ($i = 2; $i &lt;= ($m - 1) / 2; $i++) &#123;</span><br><span class="line">            if ($m % $i == 0) &#123;</span><br><span class="line">                $a++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">            if($a == 0) &#123;</span><br><span class="line">                echo iconv(&apos;utf-8&apos;, &apos;gbk&apos;, $m . &quot;是素数&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">             else &#123;</span><br><span class="line">                echo iconv(&apos;utf-8&apos;, &apos;gbk&apos;, $m . &quot;不是素数&quot;);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+                <p>用for循环遍历关联数组，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">$arr = [                                           //关联数组</span><br><span class="line">    &apos;name&apos; =&gt; &apos;zs&apos;,</span><br><span class="line">    &apos;age&apos; =&gt; 19,</span><br><span class="line">    &apos;addr&apos; =&gt; &apos;beijing&apos;,</span><br><span class="line">    &apos;email&apos; =&gt; &apos;zsmail@163.com&apos;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">$sum=count($arr);                                    //数组的长度</span><br><span class="line">for($i=0 ; $i &lt; $sum ;$i++)&#123;</span><br><span class="line">    echo key($arr),&apos;=&gt;&apos;,current($arr),&apos;&lt;br/&gt;&apos;;           //返回数组中的当前元素的值</span><br><span class="line">    next($arr);                                //将内部指针指向数组中的下一个元素，并输出</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+
                 
 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2019/08/08/输出五角星/" data-toggle="tooltip" data-placement="top" title="输出五角星">&larr; Previous post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/2019/08/06/php循环和数组/" data-toggle="tooltip" data-placement="top" title="php循环和数组">Next post &rarr;</a>
+                            <a href="/2019/08/08/输出五角星/" data-toggle="tooltip" data-placement="top" title="输出五角星">Next post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -472,7 +470,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async("http://yuanpf.com/2019/08/06/判断素数/index.html/js/jquery.tagcloud.js",function(){
+        async("http://yuanpf.com/2019/08/08/用for循环遍历关联数组/index.html/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
