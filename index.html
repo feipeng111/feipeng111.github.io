@@ -285,6 +285,44 @@
 
 
 <div class="w3-row-padding">
+	<a href="/2019/08/12/mysql--查询表中信息/">
+        <h2 class="post-title">
+            查询数据库中表的信息
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+	</a>
+<div class="w3-quarter">	
+
+<a href="/2019/08/12/mysql--查询表中信息/"><img src="11.jpg" style='width:100%'></a>
+
+</div>
+<div class="w3-threequarter">
+
+    <a href="/2019/08/12/mysql--查询表中信息/">
+
+        <div class="post-content-preview">
+            先从information_schema/columns所在数据库中表的字段信息
+1select `table_name` from `information_schema`.`tables`where table_schema = &apos;test&apos;;
+
+
+1select `column_name` from `information_schema`.`columns`.........
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by John Doe on
+            2019-08-12
+        </p>
+    
+
+</div>
+</div>
+<hr>
+
+
+<div class="w3-row-padding">
 	<a href="/2019/08/08/用for循环遍历关联数组/">
         <h2 class="post-title">
             用for循环遍历关联数组
@@ -571,47 +609,15 @@ php是嵌入html页面中的脚本语言，是目前最流行的网站开发语�
 <hr>
 
 
-<div class="w3-row-padding">
-	<a href="/2019/08/03/phpmyadmin/">
-        <h2 class="post-title">
-            phpmyadmin文件包含漏洞
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-	</a>
-<div class="w3-quarter">	
-
-<a href="/2019/08/03/phpmyadmin/"><img src="1.png" style='width:100%'></a>
-
-</div>
-<div class="w3-threequarter">
-
-    <a href="/2019/08/03/phpmyadmin/">
-
-        <div class="post-content-preview">
-            Phpmyadmin的文件包含漏洞是4.8版本的漏洞，下面是漏洞的复现
-用root权限进入phpmyadmin
-点击顶部的SQL按钮，执行SQL查询。获取自己的session ID，即为cookies中的phpmyadmin的value值，对应的session文件为var/lib/php/session/sess_就是session ID。在index.php后加上?target=db.........
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by John Doe on
-            2019-08-03
-        </p>
-    
-
-</div>
-</div>
-<hr>
-
-
 
 <!-- Pager -->
 
 <ul class="pager">
     
+    
+        <li class="next">
+            <a href="/page/2/">Older Posts &rarr;</a>
+        </li>
     
 </ul>
 
@@ -696,6 +702,10 @@ php是嵌入html页面中的脚本语言，是目前最流行的网站开发语�
         </li>
       
         <li>
+          <a href="/2019/08/12/mysql--查询表中信息/">查询数据库中表的信息</a>
+        </li>
+      
+        <li>
           <a href="/2019/08/08/用for循环遍历关联数组/">用for循环遍历关联数组</a>
         </li>
       
@@ -707,10 +717,6 @@ php是嵌入html页面中的脚本语言，是目前最流行的网站开发语�
           <a href="/2019/08/06/判断素数/">判断素数</a>
         </li>
       
-        <li>
-          <a href="/2019/08/06/php循环和数组/">php循环和数组</a>
-        </li>
-      
     </ul>
   </div>
 
@@ -719,7 +725,7 @@ php是嵌入html页面中的脚本语言，是目前最流行的网站开发语�
         
     <h5>Achives</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">10</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">11</span></li></ul>
     </div>
 
         <hr>
