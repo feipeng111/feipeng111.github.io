@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          用for循环遍历关联数组 - null
+          查询数据库中表的信息 - null
         
     </title>
 
-    <link rel="canonical" href="http://yuanpf.com/2019/08/08/用for循环遍历关联数组/">
+    <link rel="canonical" href="http://yuanpf.com/2019/08/13/mysql--查询表中信息/">
 
     <!-- Bootstrap Core CSS -->
 
@@ -105,11 +105,11 @@
                         <div class="tags">
                             
                         </div>
-                        <h1>用for循环遍历关联数组</h1>
+                        <h1>查询数据库中表的信息</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by John Doe on
-                            2019-08-08
+                            2019-08-13
                         </span>
                     </div>
                 
@@ -245,9 +245,24 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>用for循环遍历关联数组，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">$arr = [                                           //关联数组</span><br><span class="line">    &apos;name&apos; =&gt; &apos;zs&apos;,</span><br><span class="line">    &apos;age&apos; =&gt; 19,</span><br><span class="line">    &apos;addr&apos; =&gt; &apos;beijing&apos;,</span><br><span class="line">    &apos;email&apos; =&gt; &apos;zsmail@163.com&apos;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">$sum=count($arr);                                    //数组的长度</span><br><span class="line">for($i=0 ; $i &lt; $sum ;$i++)&#123;</span><br><span class="line">    echo key($arr),&apos;=&gt;&apos;,current($arr),&apos;&lt;br/&gt;&apos;;           //返回数组中的当前元素的值</span><br><span class="line">    next($arr);                                //将内部指针指向数组中的下一个元素，并输出</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+                <p>先从information_schema/columns所在数据库中表的字段信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select `table_name` from `information_schema`.`tables`where table_schema = &apos;test&apos;;</span><br></pre></td></tr></table></figure>
 
+<p><img src="11.jpg" alt></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select `column_name` from `information_schema`.`columns`where table_schema = &apos;test&apos;and table_name = &apos;content&apos;;</span><br></pre></td></tr></table></figure>
+
+<p><img src="12.jpg" alt></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select `column_name` from `information_schema`.`columns`where table_schema = &apos;test&apos;and table_name = &apos;users&apos;;</span><br></pre></td></tr></table></figure>
+
+<p><img src="13.jpg" alt></p>
+<p>查询content表中的信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT `id` `title`,`author`,`value`,`time` FROM `test`.`content`;</span><br></pre></td></tr></table></figure>
+
+<p><img src="14.jpg" alt></p>
+<p>查询users表中的信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT `id`,`username`,`passwd`,`user_ip`,`join_date` FROM `test`.`users`;</span><br></pre></td></tr></table></figure>
+
+<p><img src="15.jpg" alt></p>
 
                 
 
@@ -255,13 +270,9 @@
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2019/08/13/实现页面功能/" data-toggle="tooltip" data-placement="top" title="查询数据库中表的信息">&larr; Previous post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/2019/08/08/输出五角星/" data-toggle="tooltip" data-placement="top" title="输出五角星">Next post &rarr;</a>
+                            <a href="/2019/08/13/实现页面功能/" data-toggle="tooltip" data-placement="top" title="查询数据库中表的信息">Next post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -474,7 +485,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async("http://yuanpf.com/2019/08/08/用for循环遍历关联数组/index.html/js/jquery.tagcloud.js",function(){
+        async("http://yuanpf.com/2019/08/13/mysql--查询表中信息/index.html/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
